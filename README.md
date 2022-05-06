@@ -1,1 +1,1 @@
-# Spatial-pNERF
+# Spatial-pNeRF
