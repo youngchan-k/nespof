@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({            
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}            
+      });
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
   <meta charset="utf-8">
   <meta name="description"
         content="Neural Spectro-polarimetric Fields (NeSpoF) models the physically-valid Stokes vector at specific position, direction, and wavelength.">
@@ -222,13 +229,9 @@
             the physically-valid Stokes vector at given continuous variables of position, direction, and wavelength. NeSpoF manages
             inherently noisy raw measurements, showcases memory efficiency, and preserves physically vital signals - factors that
             are crucial for representing the high-dimensional signal of a spectro-polarimetric field.
-          </p>
-          <p>
             To validate NeSpoF, we introduce the first multi-view hyperspectral-polarimetric image dataset, comprised of both synthetic
             and real-world scenes. These were captured using our compact hyperspectral-polarimetric imaging system, which has been calibrated
             for robustness against system imperfections. We demonstrate the capabilities of NeSpoF on diverse scenes.
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
           </p>
       </div>
     </div>
@@ -243,8 +246,7 @@
     <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Method</h2>
-        <div class="content has-text-justified"> -->
-          
+        <div class="content has-text-justified"> -->    
       <div class="columns is-centered">      
         <div class="column is-full-width">
           <h2 class="title is-3">Method</h2>
@@ -363,24 +365,29 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{kim2023neural,
+    <pre><code>
+      @article{kim2023neural,
       title={Neural Spectro-polarimetric Fields},
       author={Kim, Youngchan and Jin, Wonjoon and Cho, Sunghyun and Baek, Seung-Hwan},
       journal={arXiv preprint arXiv:2306.12562},
       year={2023}
-    }</code></pre>
+      }
+    </code></pre>
   </div>
 </section>
 
 
 <footer class="footer">
-  <div class="container">
+  <div class="container is-max-desktop">
     <div class="columns is-centered">
-      <div class="column is-8">
+      <div class="column is-full-width">
         <div class="content">
           <p>
             The website template is borrowed from 
             <a href="https://github.com/nerfies/nerfies.github.io"><span class="dnerf">Nerfies</span></a>.
+            and licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
         </div>
       </div>
