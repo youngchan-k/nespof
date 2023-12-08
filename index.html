@@ -57,20 +57,20 @@
           <h1 class="title is-1 publication-title">Neural Spectro-polarimetric Fields</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://youngchan-k.github.io">Youngchan Kim</a><sup>1</sup>,
+              <a href="https://youngchan-k.github.io">Youngchan Kim</a>,
             </span>
             <span class="author-block">
               Wonjoon Jin</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://www.scho.pe.kr/">Sunghyun Cho</a><sup>1</sup>,
+              <a href="https://www.scho.pe.kr/">Sunghyun Cho</a>,
             </span>
             <span class="author-block">
-              <a href="https://www.shbaek.com/">Seung-Hwan Baek</a><sup>1</sup>
+              <a href="https://www.shbaek.com/">Seung-Hwan Baek</a>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>POSTECH</span>
+            <span class="author-block">SIGGRAPH ASIA 2023 (Conference Track)</span>
             <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
           </div>
 
@@ -78,7 +78,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="https://youngchan-k.github.io/assets/paper/SIGA2023/NeSpoF.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -86,7 +86,9 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <span class="link-block">
+
+              <!-- Arxiv Link. -->
+              <!-- <span class="link-block">
                 <a href="https://arxiv.org/pdf/2306.12562"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -94,7 +96,19 @@
                   </span>
                   <span>arXiv</span>
                 </a>
+              </span> -->
+              
+              <!-- Supple Link. -->
+              <span class="link-block">
+                <a href="https://youngchan-k.github.io/assets/paper/SIGA2023/NeSpoF_supple.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Supple</span>
+                </a>
               </span>
+
               <!-- Video Link. -->
               <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
@@ -105,6 +119,7 @@
                   <span>Video</span>
                 </a>
               </span>
+
               <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/youngchan-k/NeSpoF"
@@ -115,6 +130,7 @@
                   <span>Code</span>
                   </a>
               </span>
+              
               <!-- Dataset Link. -->
               <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
@@ -142,8 +158,7 @@
       </video>
       <h2 class="subtitle has-text-centered">
         <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        free-viewpoint portraits.
       </h2>
     </div>
   </div>
@@ -258,7 +273,7 @@
             a neural representation that describes the Stokes vector $\mathbf{s}$ and volumetric density $\sigma$ 
             for the input variables of position, direction, and wavelength.
           </p>
-          <div class="column is-centered has-text-centered"><p>\mathbf{s}, \sigma = F_\Theta(x,y,z,\theta, \phi, \lambda)</p></div>
+          <div class="column is-centered has-text-centered"><p>$\mathbf{s}, \sigma = F_\Theta(x,y,z,\theta, \phi, \lambda)$</p></div>
           <p>
             We design NeSpoF with a positional MLP, $F_\Theta^p$, and a spectro-directional MLP, $F_\Theta^d$ and turn to model
             a physically-valid Stokes vector ($s_0^2 \geq s_1^2+s_2^2+s_3^2$) by using intermediate polarimetric properties 
@@ -279,12 +294,12 @@
     <div class="columns is-centered">      
       <div class="column is-full-width">
         <h2 class="title is-3">Rendering results</h2>
+        <h3 class="title is-4">Light transport decomposition</h3>
         <!-- Interpolating. -->
         <div class="content has-text-justified">
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
+            NeSpoF enables accurate rendering of intensity, which is the first Stokes-vector element, 
+            as well as polarimetric properties as visualized in AoLP (angle of linear polarization), DoP (degree of polarization), and ToP (type of polarization).
           </p>
         </div>
         <div class="columns is-vcentered interpolation-panel">
@@ -318,8 +333,9 @@
         <h3 class="title is-4">Light transport decomposition</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+            NeSpoF enables (enter) decomposing light transport into unpolarized and polarized hyperspectral components.
+            As a result, we can separate not only diffuse and specular components (blue arrows) but also more complex light transport, 
+            such as polarized inter-reflection between the walls (red arrows).
           </p>
         </div>
         <div class="content has-text-centered">
@@ -339,8 +355,9 @@
         <h3 class="title is-4">Spectral relighting</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+            We identify elliptically-polarized sky light and extract illumination spectrum of the sky.
+            We then want to relight this scene at a novel view under D65 plotted as blue. 
+            NeSpoF enables such novel-view spectral relighting.
           </p>
         </div>
         <div class="content has-text-centered">
