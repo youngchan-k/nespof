@@ -264,7 +264,7 @@
       <div class="columns is-centered">      
         <div class="column is-full-width">
           <h2 class="title is-3">Method</h2>
-          <img src="./static/images/interpolate_start.jpg"
+          <img src="./static/images/network_architecture.jpg"
                  class="interpolation-image"
                  alt="Network architecture."/>
           <p>
@@ -293,7 +293,7 @@
     <div class="columns is-centered">      
       <div class="column is-full-width">
         <h2 class="title is-3">Novel-view Spectro-polarimetric Synthesis</h2>
-        <!-- <h3 class="title is-4">Light transport decomposition</h3> -->
+        <h3 class="title is-4">Light transport decomposition</h3>
         <!-- Interpolating. -->
         <div class="content has-text-justified">
           <p>
@@ -307,6 +307,7 @@
                 class="interpolation-image"
                 alt="Interpolate start reference image."/>
             <p>Start Frame</p>
+
           </div>
           <div class="column interpolation-video-column">
             <div id="interpolation-image-wrapper">
@@ -333,8 +334,9 @@
         <div class="content has-text-justified">
           <p>
             NeSpoF enables decomposing light transport into unpolarized and polarized hyperspectral components.
-            As a result, we can separate not only diffuse and specular components (blue arrows) but also more complex light transport, 
-            such as polarized inter-reflection between the walls (red arrows).
+            As a result, we can separate not only diffuse and specular components (red arrows) but also more complex light transport, 
+            such as polarized inter-reflection between the walls (blue arrows). 
+            Additionally, we can extract hyperspectral intensity for diffuse and specular components at a novel-view.
           </p>
         </div>
         <div class="content has-text-centered">
@@ -344,7 +346,7 @@
                  preload
                  playsinline
                  width="75%">
-            <source src="./static/videos/replay.mp4"
+            <source src="./static/videos/spectral_light_transport_decomposition.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -355,7 +357,8 @@
         <div class="content has-text-justified">
           <p>
             We identify elliptically-polarized sky light and extract illumination spectrum of the sky.
-            NeSpoF enables to relight this scene at a novel-view under D65 plotted as blue.
+            NeSpoF enables rendering of the hyperspectral intensity at a novel view and relighting 
+            by replacing the original illumination with the target illumination, CIE D65 illuminant plotted as blue.
           </p>
         </div>
         <div class="content has-text-centered">
@@ -365,7 +368,7 @@
                  preload
                  playsinline
                  width="75%">
-            <source src="./static/videos/replay.mp4"
+            <source src="./static/videos/novel_view_spectral_relighting.mp4"
                     type="video/mp4">
           </video>
         </div>
