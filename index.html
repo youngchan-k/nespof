@@ -83,7 +83,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://youngchan-k.github.io/assets/paper/SIGA2023/NeSpoF.pdf"
+                <a href="https://arxiv.org/abs/2306.12562"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -153,6 +153,7 @@
   </div>
 </section>
 
+
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -175,62 +176,6 @@
   </div>
 </section>
 
-<!-- <section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -264,6 +209,7 @@
   </div>
 </section>
 
+
 <section class="section">
   <div class="container is-max-desktop">
     <!--/ Abstract. -->
@@ -275,7 +221,7 @@
         <div class="content has-text-justified"> -->    
       <div class="columns is-centered">      
         <div class="column is-full-width">
-          <h2 class="title is-3">Method</h2>
+          <h2 class="title is-3">Neural Spectro-polarimetric Field (NeSpoF)</h2>
           <img src="./static/images/network_architecture.JPG"
                  class="interpolation-image"
                  alt="Network architecture."
@@ -292,6 +238,34 @@
             as outputs ($s_0$, $\rho$, $\chi$, and $\psi$).
             Additionally, we perform coordinate conversions of Stokes vectors since the polarization state of a light ray can be 
             described differently with Stokes vectors at different coordinates.
+          </p>
+        </div>
+      </div>
+    <!--/ Method. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!--/ Abstract. -->
+
+    <!-- Method. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified"> -->
+      <div class="columns is-centered">      
+        <div class="column is-full-width">
+          <h2 class="title is-3">Portable Hyperspectral-polarimetric Imager</h2>
+          <img src="./static/images/imaging_system.PNG"
+                 class="interpolation-image"
+                 alt="Network architecture."
+                 width="100%"/>
+          <p>
+            We built a portable hyperspectral polarimetric imaging system, consisting of a monochromatic camera, LCTF that controls the transmitted wavelength, 
+            and a quarter wave plate mounted on a motorized rotation stage. We capture a scene for 21 wavelengths and 4 quarter-wave plate angles and reconstruct 
+            per-pixel Stokes vector by solving a least-squares problem with spatially-varying spectro-polarimetric calibration using these captured images.
           </p>
         </div>
       </div>
@@ -397,11 +371,12 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
-      @article{kim2023neural,
-      title={Neural Spectro-polarimetric Fields},
-      author={Kim, Youngchan and Jin, Wonjoon and Cho, Sunghyun and Baek, Seung-Hwan},
-      journal={arXiv preprint arXiv:2306.12562},
-      year={2023}
+      @inproceedings{kim2023nespof,
+        author = {Kim, Youngchan and Jin, Wonjoon and Cho, Sunghyun and Baek, Seung-Hwan},
+        title = {Neural Spectro-Polarimetric Fields},
+        year = {2023},
+        doi = {10.1145/3610548.3618172},
+        booktitle = {SIGGRAPH Asia 2023 Conference Papers},
       }
     </code></pre>
   </div>
