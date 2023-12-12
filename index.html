@@ -115,7 +115,17 @@
               </span>
               
               <!-- Video Link. -->
-              <!-- <span class="link-block">
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Fast Forward</span>
+                </a>
+              </span>
+              
+              <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -123,7 +133,7 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span> -->
+              </span>
 
               <!-- Code Link. -->
               <span class="link-block">
@@ -280,7 +290,7 @@
     <div class="columns is-centered">      
       <div class="column is-full-width">
         <h2 class="title is-3">Novel-view Spectro-polarimetric Synthesis</h2>
-        <!-- <h3 class="title is-4">Light transport decomposition</h3> -->
+        <h3 class="title is-4">Synthetic Results</h3>
         <!-- Interpolating. -->
         <div class="content has-text-justified">
           <p>
@@ -288,7 +298,25 @@
             as well as polarimetric properties as visualized in AoLP (angle of linear polarization), DoP (degree of polarization), and ToP (type of polarization).
           </p>
         </div>
+        
+        
+        <!-- Synthetic Result -->
+        <div class="columns is-centered">      
+          <div class="column is-full-width">
+            <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+              <source src="./static/videos/synthetic_results.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+        
         <div class="columns is-vcentered interpolation-panel">
+          
           <div class="column is-3 has-text-centered">
             <img src="./static/images/start_moving_AoLP.png"
                 class="interpolation-image"
@@ -311,9 +339,83 @@
             <p class="is-bold">End Frame</p>
           </div>
         </div>
-        <br/>
-        <!--/ Interpolating. -->
 
+        <br/>
+
+        <!-- Real Result -->
+        <h3 class="title is-4">Real Results</h3>
+        <div class="content has-text-justified">
+          <p>
+            This scene includes a glass box surrounding certain objects and a specular crystal outside of the glass box.
+            For this area, NeSpoF demonstrates modeling intricate variations of AoLP on the crystal surfaces. 
+            The polarization of this region also significantly changes according to viewpoints and wavelength.
+          </p>
+        </div>
+
+        <div class="columns is-centered">      
+          <div class="column is-full-width">
+            <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+              <source src="./static/videos/real_results_1.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="content has-text-justified">
+          <p>
+            This is another scene containing linear polarization film laptop and smartphone covered with protective film.
+            When we visualize AoLP for this region, we observed that the linear polarization film and laptop display emits uniformly-distributed 
+            linearly polarized light, while the light from smartphone display interacts with stressed protective film, resulting in interesting polarimetric variation. 
+            NeSpoF successfully models such variations, closely matching the ground truth even for different wavelengths.
+
+          </p>
+        </div>
+
+        <div class="columns is-centered">      
+          <div class="column is-full-width">
+            <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+              <source src="./static/videos/real_results_2.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column is-3 has-text-centered">
+          <img src="./static/images/start_moving_AoLP.png"
+              class="interpolation-image"
+              alt="Interpolate start reference image."/>
+          <p>Start Frame</p>
+
+        </div>
+        <div class="column interpolation-video-column">
+          <div id="interpolation-image-wrapper">
+            Loading...
+          </div>
+          <input class="slider is-fullwidth is-large is-info"
+                id="interpolation-slider"
+                step="1" min="0" max="54" value="0" type="range">
+        </div>
+        <div class="column is-3 has-text-centered">
+          <img src="./static/images/end_moving_AoLP.png"
+              class="interpolation-image"
+              alt="Interpolation end reference image."/>
+          <p class="is-bold">End Frame</p>
+        </div>
+
+        <br/>
+
+
+        <!-- Applications. -->
         <h2 class="title is-3">Applications</h2>
         
         <!-- Diffuse/Specular. -->
