@@ -290,7 +290,7 @@
     <div class="columns is-centered">      
       <div class="column is-full-width">
         <h2 class="title is-3">Novel-view Spectro-polarimetric Synthesis</h2>
-        <h3 class="title is-4">Synthetic Results</h3>
+        
         <!-- Interpolating. -->
         <div class="content has-text-justified">
           <p>
@@ -299,7 +299,7 @@
           </p>
         </div>
         
-        
+        <h3 class="title is-4">Synthetic Results</h3>
         <!-- Synthetic Result -->
         <div class="columns is-centered">      
           <div class="column is-full-width">
@@ -314,33 +314,6 @@
             </video>
           </div>
         </div>
-        
-        <div class="columns is-vcentered interpolation-panel">
-          
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/start_moving_AoLP.png"
-                class="interpolation-image"
-                alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                  id="interpolation-slider"
-                  step="1" min="0" max="54" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/end_moving_AoLP.png"
-                class="interpolation-image"
-                alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-
-        <br/>
 
         <!-- Real Result -->
         <h3 class="title is-4">Real Results</h3>
@@ -389,6 +362,34 @@
             </video>
           </div>
         </div>
+
+        <!-- Real Result -->
+        <div class="columns is-vcentered interpolation-panel">
+          
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/start_frame.png"
+                class="interpolation-image"
+                alt="Interpolate start reference image."/>
+            <p>Start Frame</p>
+
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                  id="interpolation-slider"
+                  step="1" min="0" max="52" value="0" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/end_frame.png"
+                class="interpolation-image"
+                alt="Interpolation end reference image."/>
+            <p class="is-bold">End Frame</p>
+          </div>
+        </div>
+
+        <br/>
 
         <!-- Applications. -->
         <h2 class="title is-3">Applications</h2>
