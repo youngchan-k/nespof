@@ -70,6 +70,11 @@
           </div>
 
           <div class="is-size-5 publication-authors">
+            <span class="author-block">POSTECH</span>
+            <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
+          </div>
+
+          <div class="is-size-5 publication-authors">
             <span class="author-block">SIGGRAPH ASIA 2023 (Conference Track)</span>
             <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
           </div>
@@ -151,13 +156,19 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
+      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
         <source src="./static/videos/teaser.mp4"
                 type="video/mp4">
-      </video>
+      </video> -->
+      <img src="./static/images/teaser.PNG"
+           class="interpolation-image"
+           alt="Teaser."/>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint portraits.
+        We present neural spectro-polarimetric fields that allow for the rendering of a scene from novel views, not limited
+        to the synthesis of (a) RGB radiance images. We can render (b) hyperspectral Stokes vectors for each individual light ray,
+        thus providing a comprehensive description of its spectro-polarization property. Also, (c) it can inherently reduce noise in
+        low-signal-to-noise ratio spectro-polarimetric measurements, as shown in the degree of polarization (DoP). (d)We further
+        show the analysis of spectro-polarimetric information for the CD that is otherwise invisible to the human eye.
       </h2>
     </div>
   </div>
@@ -267,7 +278,7 @@
           <img src="./static/images/network_architecture.JPG"
                  class="interpolation-image"
                  alt="Network architecture."
-                 width="80%"/>
+                 width="100%"/>
           <p>
             We propose modeling the spectro-polarimetric field $f(\cdot)$ using NeSpoF, 
             a neural representation that describes the Stokes vector $\mathbf{s}$ and volumetric density $\sigma$ 
@@ -316,7 +327,7 @@
             </div>
             <input class="slider is-fullwidth is-large is-info"
                   id="interpolation-slider"
-                  step="1" min="0" max="53" value="0" type="range">
+                  step="1" min="0" max="25" value="0" type="range">
           </div>
           <div class="column is-3 has-text-centered">
             <img src="./static/images/end_moving_AoLP.png"
