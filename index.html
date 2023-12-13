@@ -238,7 +238,14 @@
             a neural representation that describes the Stokes vector $\mathbf{s}$ and volumetric density $\sigma$ 
             for the input variables of position, direction, and wavelength.
           </p>
+
           <div class="column is-centered has-text-centered"><p>$\mathbf{s}, \sigma = F_\Theta(x,y,z,\theta, \phi, \lambda)$</p></div>
+
+          <img src="./static/images/network_architecture.PNG"
+                 class="interpolation-image"
+                 alt="Network architecture."
+                 width="100%"/>
+          
           <p>
             We design NeSpoF with a positional MLP, $F_\Theta^p$, and a spectro-directional MLP, $F_\Theta^d$ and turn to model
             a physically-valid Stokes vector ($s_0^2 \geq s_1^2+s_2^2+s_3^2$) by using intermediate polarimetric properties 
@@ -246,11 +253,6 @@
             Additionally, we perform coordinate conversions of Stokes vectors since the polarization state of a light ray can be 
             described differently with Stokes vectors at different coordinates.
           </p>
-
-          <img src="./static/images/network_architecture.PNG"
-                 class="interpolation-image"
-                 alt="Network architecture."
-                 width="100%"/>
         </div>
       </div>
     <!--/ Method. -->
@@ -265,14 +267,18 @@
           <h2 class="title is-3">Portable Hyperspectral-polarimetric Imager</h2>
           <p>
             We built a portable hyperspectral polarimetric imaging system, consisting of a monochromatic camera, LCTF that controls the transmitted wavelength, 
-            and a quarter wave plate mounted on a motorized rotation stage. We capture a scene for 21 wavelengths and 4 quarter-wave plate angles and reconstruct 
-            per-pixel Stokes vector by solving a least-squares problem with spatially-varying spectro-polarimetric calibration using these captured images.
+            and a quarter wave plate mounted on a motorized rotation stage.
           </p>
           
           <img src="./static/images/imaging_system.PNG"
                  class="interpolation-image"
                  alt="Network architecture."
                  width="100%"/>
+
+          <p>
+            We capture a scene for 21 wavelengths and 4 quarter-wave plate angles and reconstruct 
+            per-pixel Stokes vector by solving a least-squares problem with spatially-varying spectro-polarimetric calibration using these captured images.
+          </p>
         </div>
       </div>
   </div>
@@ -426,7 +432,7 @@
           <p>
             This is another scene containing linear polarization film laptop and smartphone covered with protective film.
             When we visualize AoLP for this region, we observed that the linear polarization film and laptop display emits uniformly-distributed 
-            linearly polarized light, while the light from smartphone display interacts with stressed protective film, resulting in interesting polarimetric variation. 
+            linearly polarized light, while the light from smartphone display interacts with protective film, resulting in interesting polarimetric variation. 
             NeSpoF successfully models such variations, closely matching the ground truth even for different wavelengths.
           </p>
         </div>
