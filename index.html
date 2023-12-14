@@ -115,20 +115,19 @@
               </span>
               
               <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://youngchan-k.github.io/assets/video/NeSpoF_fast_forward.mov"
+              <!-- <span class="link-block">
+                <a href="ht tps://youngchan-k.github.io/assets/video/NeSpoF_fast_forward.mov"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
                   <span>Fast Forward</span>
                 </a>
-              </span>
+              </span> -->
 
               <span class="link-block">
-                <!-- <a href="https://youngchan-k.github.io/assets/video/NeSpoF_fast_forward.mov"
-                   class="external-link button is-normal is-rounded is-dark"> -->
-                <a class="external-link button is-normal is-rounded is-dark">
+                <a href="https://youngchan-k.github.io/assets/video/NeSpoF_fast_forward.mov"
+                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
@@ -289,6 +288,50 @@
 
 <section class="section">
   <div class="container is-max-desktop">
+      <div class="columns is-centered">      
+        <div class="column is-full-width">
+          <h2 class="title is-3">Multi-view Hyperspectral Polarimetric Dataset</h2>
+          <p>
+            We acquire the first multi-view hyperspectral polarimetric dataset of four synthetic scenes and four real-world scenes.
+            Here are the thumbnails and preview videos of our multi-view hyperspectral polarimetric dataset.
+          </p>
+          
+          <img src="./static/images/dataset_thumbnail.PNG"
+                 class="interpolation-image"
+                 alt="Network architecture."
+                 width="100%"/>
+
+          <div class="columns is-centered">
+            <div class="column">
+              <div class="content">
+                <h3 class="title is-4">Synthetic</h3>
+                <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/dataset_synthetic.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column">
+              <h3 class="title is-4">Real-world</h3>
+              <div class="columns is-centered">
+                <div class="column content">
+                  <video id="matting-video" controls playsinline height="100%">
+                    <source src="./static/videos/dataset_real.mp4"
+                            type="video/mp4">
+                  </video>
+                </div>
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
 
     <div class="columns is-centered">      
       <div class="column is-full-width">
@@ -353,22 +396,6 @@
 
         <br/>
 
-        <!-- Synthetic Result -->
-        <!-- <h3 class="title is-4">Synthetic Results</h3> -->
-        <!-- <div class="columns is-centered">      
-          <div class="column is-full-width">
-            <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="100%">
-              <source src="./static/videos/synthetic_results_0.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div> -->
-
         <div class="content has-text-justified">
           <p>
             Compared to ground truth, visualizing intensity $s_0$ and polarization states with AoLP, DoP, and ToP, 
@@ -389,23 +416,6 @@
             </video>
           </div>
         </div>
-
-
-        <!-- Real Result -->
-        <!-- <h3 class="title is-4">Real Results</h3> -->
-        <!-- <div class="columns is-centered">      
-          <div class="column is-full-width">
-            <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="100%">
-              <source src="./static/videos/real_results_0.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div> -->
 
         <div class="content has-text-justified">
           <p>
@@ -455,6 +465,7 @@
     </div>
   </div>
 </section>
+
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -511,6 +522,54 @@
 </section>
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Applications. -->
+    <h2 class="title is-3">Fast Forward</h2>
+    <div class="content has-text-centered">
+      <video id="replay-video"
+              controls
+              muted
+              preload
+              playsinline
+              width="100%">
+        <source src="./static/videos/NeSpoF_fast_forward.mov"
+                type="video/mov">
+      </video>
+    </div>
+    
+    <p>
+      Modeling the light rays with plenoptic function has been widely investigated in diverse applications such as imaging and rendering. 
+      However, it does not consider the wave properties of light.
+      Therefore, we define the spectro-polarimetric field to incorporate the spectrum and polarization in ray modeling.
+      In this work, we propose Neural Spectro-polarimetric Field (NeSpoF) and take a first step on acquiring, modeling, and rendering spectro-polarimetric fields.
+      By using NeSpoF, we can demonstrate diverse applications. We will describe more details in our talk. Thank you!
+    </p>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Applications. -->
+    <h2 class="title is-3">Presentation</h2>
+    <!-- <div class="content has-text-centered">
+      <video id="replay-video"
+              controls
+              muted
+              preload
+              playsinline
+              width="100%">
+        <source src="./static/videos/NeSpoF_fast_forward.mov"
+                type="video/mov">
+      </video>
+    </div> -->
+    
+    <p>
+      I will upload the video once the conference is concluded!
+    </p>
+  </div>
+</section>
 
 
 <section class="section" id="BibTeX">
