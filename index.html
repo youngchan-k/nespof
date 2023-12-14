@@ -276,10 +276,10 @@
                  alt="Network architecture."
                  width="100%"/>
 
-          <p>
+          <!-- <p>
             We capture a scene for 21 wavelengths and 4 quarter-wave plate angles and reconstruct 
             per-pixel Stokes vector by solving a least-squares problem with spatially-varying spectro-polarimetric calibration using these captured images.
-          </p>
+          </p> -->
         </div>
       </div>
   </div>
@@ -291,7 +291,17 @@
     <div class="columns is-centered">      
       <div class="column is-full-width">
         <h2 class="title is-3">Multi-view Hyperspectral Polarimetric Dataset</h2>
-        
+        <p>
+          We acquire the first multi-view hyperspectral polarimetric dataset of four synthetic scenes and four real-world scenes.
+        </p>
+        <p>
+          For synthetic scenes, we apply polarimetric BRDF to mesh and render images using spectro-polarimetric renderer Mitsuba 3.
+        </p>
+        <p>
+          For real-world scenes, we capture a scene for 21 wavelengths and 4 quarter-wave plate angles and reconstruct 
+          per-pixel Stokes vector by solving a least-squares problem with spatially-varying spectro-polarimetric calibration using these captured images.
+        </p>
+
         <!-- <img src="./static/images/dataset_thumbnail.PNG"
               class="interpolation-image"
               alt="Dataset thumbnail."
@@ -329,11 +339,7 @@
             </div>
           </div>
         </div>
-        
-        <p>
-          We acquire the first multi-view hyperspectral polarimetric dataset of four synthetic scenes and four real-world scenes.
-        </p>
-        
+
       </div>
     </div>
   </div>
