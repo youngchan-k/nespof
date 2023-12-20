@@ -1,0 +1,33 @@
+expname = scene_2_1
+basedir = ./logs/videos
+datadir = ./data/real/scene_2_1
+dataset_type = real
+factor = 1
+llffhold = 8
+
+no_batching = False
+
+use_viewdirs = True
+lrate_decay = 500
+raw_noise_std = 1e0
+
+N_samples = 64
+N_importance = 128
+
+rotate_stoke = True
+N_iters = 200000
+netwidth = 256
+netwidth_fine = 256
+N_rand = 8192
+chunk = 32768
+netchunk = 65536
+wave_both = False
+
+multires_waves = 1
+loss_mode = vanilla
+intermediate = True
+
+render_only=True
+render_factor = 1
+target_wavelength = 550
+scale_rads=0.05
