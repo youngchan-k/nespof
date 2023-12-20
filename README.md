@@ -14,19 +14,17 @@ conda install -c conda-forge openexr
 
 ## Datasets
 Download the data [here](http://cgdata.postech.ac.kr/sharing/fkMLq3LSK). Place the downloaded dataset according to the following directory structure:
+
 ```
-¢u¢w¢w configs                                                                                                       
-¢x?? ¢u¢w¢w ...                                                                                     
-¢x??                                                                                             
-¢u¢w¢w data                                                                                                                                                                                                       
-¢x?? ¢u¢w¢w synthetic                                                                                                  
-¢x?? ¢x?? ¢|¢w¢w ajar                                                                                                                             
-¢x?? ¢x?  ¢|¢w¢w cbox_dragon
-|   |   ¢|¢w¢w ...
-|   ¢u¢w¢w real
-|   |   ¢|¢w¢w scene_1
-|   |   ¢|¢w¢w scene_2
-|   |   ¢|¢w¢w ...
+data
+|-- synthetic
+|   |-- ajar
+|   |-- cbox_dragon
+|   |-- ...
+|-- real
+    |-- scene_1
+    |-- scene_2
+    |-- ...
 ```
 
 ## How To Run?
