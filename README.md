@@ -15,18 +15,18 @@ conda install -c conda-forge openexr
 ## Datasets
 Download the data [here](http://cgdata.postech.ac.kr/sharing/fkMLq3LSK). Place the downloaded dataset according to the following directory structure:
 ```
-戍式式 configs                                                                                                       
-弛   戍式式 ...                                                                                     
-弛                                                                                               
-戍式式 data                                                                                                                                                                                                       
-弛   戍式式 synthetic                                                                                                  
-弛   弛   戌式式 ajar                                                                                                                             
-弛   弛   戌式式 cbox_dragon                                                                                   
-|   |   戌式式 ...
-|   戍式式 real
-|   |   戌式式 scene_1
-|   |   戌式式 scene_2
-|   |   戌式式 ...
+├── configs                                                                                                       
+│?? ├── ...                                                                                     
+│??                                                                                             
+├── data                                                                                                                                                                                                       
+│?? ├── synthetic                                                                                                  
+│?? │?? └── ajar                                                                                                                             
+│?? │?  └── cbox_dragon
+|   |   └── ...
+|   ├── real
+|   |   └── scene_1
+|   |   └── scene_2
+|   |   └── ...
 ```
 
 ## How To Run?
@@ -35,6 +35,7 @@ To train NeSpoF on synthetic datasets:
 python run_nespof.py --config configs/synthetic/{DATASET}.txt
 ```
 replace {DATASET} with ajar | cbox_dragon | cbox_sphere | hotdog.
+
 ---
 
 To train NeSpoF on real-world datasets:
@@ -42,12 +43,14 @@ To train NeSpoF on real-world datasets:
 python run_nespof.py --config configs/real/{DATASET}.txt
 ```
 replace {DATASET} with scene_1 | scene_2 | scene_3 | scene_4.
+
 ---
 
 After training, you can also render the video for Stokes vector and polarimetric visualization:
 ```
-python run_nespof.py --config configs/video/hotdog.txt
+python run_nespof.py --config configs/video/{DATASET}.txt
 ```
+replace {DATASET} with ajar | cbox_dragon | cbox_sphere | hotdog | scene_1 | scene_2 | scene_3 | scene_4.
 
 ## Method
-You can see the details in the NeSpoF webpage [here](https://youngchan-k.github.io/nespof)
+For more details, please check our project website [here](https://youngchan-k.github.io/nespof)
