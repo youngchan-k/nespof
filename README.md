@@ -1,6 +1,6 @@
 # Neural Spectro-polarimetric Fields (NeSpoF)
 [NeSpoF](https://youngchan-k.github.io/nespof) (Neural Spectro-polarimetric Field) is a physically-valid neural representation that models spectro-polarimetric fields.
-The code is based on [NeRF-pytorch](https://github.com/yenchenlin/nerf-pytorch) and you should follow the [requirements.txt](https://github.com/yenchenlin/nerf-pytorch/blob/master/requirements.txt) provided there. For more details, please check our project website [here](https://youngchan-k.github.io/nespof)
+The code is based on [NeRF-pytorch](https://github.com/yenchenlin/nerf-pytorch) and you should follow the [requirements.txt](https://github.com/yenchenlin/nerf-pytorch/blob/master/requirements.txt) provided there.
 
 ## Installation
 ```
