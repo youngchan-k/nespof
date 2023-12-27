@@ -13,7 +13,7 @@ conda install -c conda-forge openexr
 ```
 
 ## Datasets
-Download the data [here](http://cgdata.postech.ac.kr/sharing/fkMLq3LSK). Place the downloaded dataset according to the following directory structure:
+Download the data [here](http://cgdata.postech.ac.kr/sharing/LuzTZ1V71). Addtionally, you can generate a synthetic dataset using Mitsuba 3 with reference to this code [here](http://cgdata.postech.ac.kr/sharing/jwPpqmSqt). Place the downloaded dataset according to the following directory structure:
 
 ```
 data
@@ -26,6 +26,7 @@ data
     |-- scene_2
     |-- ...
 ```
+
 
 ## How To Run?
 To train NeSpoF on synthetic datasets:
