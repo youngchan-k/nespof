@@ -13,7 +13,7 @@ conda install -c conda-forge openexr
 ```
 
 ## Datasets
-Download the data [here](http://cgdata.postech.ac.kr/sharing/LuzTZ1V71). Addtionally, you can generate a synthetic dataset using Mitsuba 3 with reference to this code [here](http://cgdata.postech.ac.kr/sharing/jwPpqmSqt). Place the downloaded dataset according to the following directory structure:
+Download the data [here](https://drive.google.com/drive/folders/1W7apuXPA3EkyUs8VgZgwdMpnc96aLXXJ). Addtionally, you can generate a synthetic dataset using Mitsuba 3 with reference to this code [here](https://drive.google.com/drive/folders/1IDQsnRMGTXcek4TMs2PjO_0IHs-zxMgz). Place the downloaded dataset according to the following directory structure:
 
 ```
 data
