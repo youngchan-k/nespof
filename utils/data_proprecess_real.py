@@ -94,17 +94,19 @@ def spec_to_rgb(img_path, save_path, waves, view):
         return
     imgs = []
     
-    coefficient = np.load("./calibration/spec_coefficient.npy")
+    ''' Remove the spec_coefficient as it has already been incorporated into other coefficients. '''
+    # coefficient = np.load("./calibration/spec_coefficient.npy")
     
     for w in waves:
         image = os.path.join(img_path, str(w), "-90", view)
         img = cv2.imread(image, -1) / (2**16 - 1)
         
-        idx = int((w - 450)/10)
-        coeff_w = coefficient[idx]
+        # idx = int((w - 450)/10)
+        # coeff_w = coefficient[idx]
         
         QE_w, PT_w, FT_w = spec_calib(w)
-        img /= (QE_w * PT_w * FT_w / coeff_w)
+        # img /= (QE_w * PT_w * FT_w / coeff_w)
+        img /= (QE_w * PT_w * FT_w)
         
         imgs.append(img)
     
